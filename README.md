@@ -1,1 +1,2 @@
 # Lgp.Rf433
+Lgp.Rf433 is a package for controlling 433 MHz RF devices using a Raspberry Pi. It provides functions to send and receive RF signals, making it easy to integrate RF device control into your projects.
