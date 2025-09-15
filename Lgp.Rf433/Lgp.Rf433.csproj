@@ -15,7 +15,11 @@
 	</PropertyGroup>
 	
 	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
-	  <Exec Command="scp -r .\bin\ lgp19@raspberrypi:~/lgp.rf433&#xD;&#xA;ssh lgp19@raspberrypi &quot;chmod +x ~/lgp.rf433/Debug/net8.0/linux-arm64/Lgp.Rf433&quot;" />
+	  <Exec Command="scp -pr .\bin\* lgp19@raspberrypi:~/lgp.rf433&#xD;&#xA;ssh lgp19@raspberrypi &quot;chmod +x ~/lgp.rf433/Debug/net8.0/linux-arm64/Lgp.Rf433&quot;" />
 	</Target>
+	
+	<ItemGroup>
+	  <PackageReference Include="System.Device.Gpio" Version="4.0.1" />
+	</ItemGroup>
 
 </Project>
